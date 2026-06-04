@@ -1,0 +1,12 @@
+- name: Install nad nginx
+  hosts: test server
+  tasks:
+  - name: install nginx
+    ansible.bultin.package:
+     name: nginx
+     state: present
+  - name: start nginx
+    service:
+    - name: nginx
+      state: started
+      enabled: yes
