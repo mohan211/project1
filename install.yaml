@@ -1,8 +1,8 @@
 - name: Install nad nginx
-  hosts: test server
+  hosts: test
   tasks:
   - name: install nginx
-    ansible.bultin.package:
+    ansible.builtin.package:
      name: nginx
      state: present
   - name: start nginx
